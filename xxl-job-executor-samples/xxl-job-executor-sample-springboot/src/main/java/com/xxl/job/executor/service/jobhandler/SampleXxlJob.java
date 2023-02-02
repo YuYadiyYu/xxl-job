@@ -45,6 +45,16 @@ public class SampleXxlJob {
         // default success
     }
 
+    /**
+     * 1、简单任务示例（Bean模式）
+     */
+    @XxlJob("abnormalJobHandler")
+    public void abnormalJobHandler() throws Exception {
+        XxlJobHelper.log("XXL-JOB, Hello World.");
+        System.out.println("demo1");
+        // default success
+    }
+
 
     /**
      * 2、分片广播任务
